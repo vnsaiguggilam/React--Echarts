@@ -19,6 +19,7 @@ class ScatterChart extends Component {
       },
       xAxis: {},
       yAxis: {},
+      color: ["#ee6666"],
       series: [
         {
           symbolSize: 12,

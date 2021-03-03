@@ -29,7 +29,7 @@ class SmothLineAreaChart extends Component {
           data: [820, 932, 901, 934, 1290, 1330, 1320],
           type: "line",
           smooth: true,
-          areaStyle: { color: "#f57842" }
+          areaStyle: { color: "#7fcaeb" }
         }
       ]
     };

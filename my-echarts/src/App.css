@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.on {
+  color: #282c34;
+  background-color: aquamarine;
+}
+.off {
+  color: #61dafb;
+  background-color: brown;
+}
+

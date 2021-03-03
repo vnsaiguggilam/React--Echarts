@@ -1,7 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Paper, Grid, Divider } from '@material-ui/core';
-import ScatterChart from './ScatterChart';
+import BarChart from './BarChart';
+import BarChartBg from './BarChartBg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -14,30 +15,29 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Line() {
+export default function Bar() {
     const classes = useStyles();
     return (
         <div>
             
             <Typography variant="h6" noWrap>
-                Scatter Charts
+                Bar Charts
             </Typography>
             <Divider />
             <br />
-
             <Grid container spacing={3}>
-                <Grid item  xs={6} >
+                <Grid item  xs={6}>
                     <Paper className={classes.paper}>
-                        <ScatterChart />
+                        <BarChart />
                     </Paper>
                 </Grid>
                 <Grid item  xs={6}>
                     <Paper className={classes.paper}>
-                        
+                        <BarChartBg />
                     </Paper>
                 </Grid>
             </Grid>
-            
+
             
             
         </div>

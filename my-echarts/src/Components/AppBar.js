@@ -1,13 +1,13 @@
 import React from 'react';
+// import { BrowserRouter, Router, Route, NavLink, Switch, HashRouter, Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Layout from './Layout';
 
-const drawerWidth = 200;
+const drawerWidth = 120;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,7 +46,6 @@ export default function ClippedDrawer() {
           </Typography>
         </Toolbar>
       </AppBar>
-     
       <main className={classes.content}>
         <Toolbar />
         <Layout />
