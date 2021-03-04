@@ -6,6 +6,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Layout from './Layout';
+import LayOutTheme from './LayOutTheme';
+import DarkTheme from './DarkMode';
 
 const drawerWidth = 120;
 
@@ -16,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     backgroundColor: "#f57c00"
+  },
+  title: {
+    flexGrow: 1,
   },
   drawer: {
     width: drawerWidth,
@@ -41,9 +46,11 @@ export default function ClippedDrawer() {
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-          <Typography variant="h6" noWrap>
+          <Typography variant="h6" className={classes.title} noWrap>
             E Charts
           </Typography>
+          <LayOutTheme />
+          {/* <DarkTheme /> */}
         </Toolbar>
       </AppBar>
       <main className={classes.content}>
