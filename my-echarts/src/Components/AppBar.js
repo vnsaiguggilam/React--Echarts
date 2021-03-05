@@ -6,7 +6,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Layout from './Layout';
-import LayOutTheme from './LayOutTheme';
 import DarkTheme from './DarkMode';
 
 const drawerWidth = 120;
@@ -49,7 +48,7 @@ export default function ClippedDrawer() {
           <Typography variant="h6" className={classes.title} noWrap>
             E Charts
           </Typography>
-          <LayOutTheme />
+         
           {/* <DarkTheme /> */}
         </Toolbar>
       </AppBar>

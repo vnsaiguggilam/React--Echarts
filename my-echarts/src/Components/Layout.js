@@ -3,7 +3,7 @@ import { Grid, Button } from '@material-ui/core';
 import Line from './LineCharts/Line';
 import Bar from './BarCharts/Bar';
 import Scatter from './ScatterCharts/Scatter';
-
+import LayOutTheme from './LayOutTheme';
 export default class Layout extends Component {
     constructor() {
         super();
@@ -18,6 +18,11 @@ export default class Layout extends Component {
     render() {
         return (
             <div>
+                <Grid container
+                    style={{ flexGrow: 1, justifyContent: "flex-end" }}>
+                        <LayOutTheme />
+                    
+                </Grid>
                 <Grid container spacing={2}>
                     <Grid item xs={2}>
                         <Button variant="outlined"
@@ -43,11 +48,6 @@ export default class Layout extends Component {
                             Scatter Chart
                         </Button>   
                     </Grid>
-                    {/* <Grid item xs>
-                        <Button variant="outlined" color="primary">
-                            Other Chart
-                        </Button>
-                    </Grid> */}
                     
                 </Grid>
 

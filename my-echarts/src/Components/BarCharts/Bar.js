@@ -4,7 +4,9 @@ import { Typography, Paper, Grid, Divider } from '@material-ui/core';
 import BarChart from './BarChart';
 import BarChartBg from './BarChartBg';
 import BarYCategory from './Bar-Y-Category';
+import BarYCategoryStack from './Bar-Y-Category-Stack';
 import BarRaceAnimation from './BarRaceAnimation';
+import BarLabelRotation from './BarLabelRotation';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,7 +23,6 @@ export default function Bar() {
     const classes = useStyles();
     return (
         <div>
-            
             <Typography variant="h6" noWrap>
                 Bar Charts
             </Typography>
@@ -48,7 +49,20 @@ export default function Bar() {
                 </Grid>
                 <Grid item  xs={6}>
                     <Paper className={classes.paper}>
-                       <BarRaceAnimation />
+                        <BarYCategoryStack />
+                    </Paper>
+                </Grid>
+            </Grid>
+
+            <Grid container spacing={3}>
+                <Grid item  xs={6}>
+                    <Paper className={classes.paper}>
+                        <BarRaceAnimation />
+                    </Paper>
+                </Grid>
+                <Grid item  xs={6}>
+                    <Paper className={classes.paper}>
+                        <BarLabelRotation />
                     </Paper>
                 </Grid>
             </Grid>
