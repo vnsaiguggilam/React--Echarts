@@ -4,6 +4,7 @@ import Line from './LineCharts/Line';
 import Bar from './BarCharts/Bar';
 import Scatter from './ScatterCharts/Scatter';
 import LayOutTheme from './LayOutTheme';
+import Clock from './ClockCharts/Clock';
 export default class Layout extends Component {
     constructor() {
         super();
@@ -48,6 +49,14 @@ export default class Layout extends Component {
                             Scatter Chart
                         </Button>   
                     </Grid>
+                    <Grid item xs={2}>
+                        <Button variant="outlined"
+                                color={this.state.mode===4?"primary":""}
+                                onClick={this.setMode.bind(this, 4)}
+                        >
+                            Clock Chart
+                        </Button>   
+                    </Grid>
                     
                 </Grid>
 
@@ -61,7 +70,6 @@ export default class Layout extends Component {
                     :""
                 }
                 
-
                 {this.state.mode===2?
                     <Grid container spacing={3}>
                         <Grid item xs>
@@ -75,6 +83,15 @@ export default class Layout extends Component {
                     <Grid container spacing={3}>
                         <Grid item xs>
                             <Scatter />
+                        </Grid>
+                    </Grid>
+                    :""
+                }
+
+                {this.state.mode===4?
+                    <Grid container spacing={3}>
+                        <Grid item xs>
+                            <Clock />
                         </Grid>
                     </Grid>
                     :""
